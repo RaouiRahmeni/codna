@@ -24,7 +24,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-5">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-tl from-slate-50 via-white to-blue-50 pt-5">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -43,7 +43,7 @@ export default function Hero() {
         />
 
         {/* Floating Grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.06)_1px,transparent_1px)] bg-size-[48px_48px] mask-[radial-gradient(ellipse_at_center,black_55%,transparent_85%)]" />
       </div>
 
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -70,7 +70,7 @@ export default function Hero() {
             </span>
             <br />
             <span
-              className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient"
+              className="inline-block bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent bg-size-[200%_auto] animate-gradient"
               style={{ animationDelay: "0.2s" }}
             >
               Web Systems
@@ -113,7 +113,7 @@ export default function Hero() {
               className="group px-8 py-4 bg-black text-white font-semibold rounded-xl hover:bg-gray-900 transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden"
             >
               <span className="relative z-10">Start Your Project</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="absolute inset-0 bg-linear-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="absolute inset-0 translate-x-full group-hover:translate-x-0 bg-white/10 transition-transform duration-300" />
             </Link>
 
@@ -160,7 +160,7 @@ export default function Hero() {
         >
           <div className="relative group">
             {/* Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 animate-pulse-slow" />
+            <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 animate-pulse-slow" />
 
             {/* Logo Container */}
             <div className="relative animate-float">
@@ -174,7 +174,7 @@ export default function Hero() {
               />
 
               {/* Orbiting Elements */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] pointer-events-none">
+              <div className="absolute top-1/2 left-1 -translate-x-1 -translate-y-1 w-80 h-80 pointer-events-none">
                 <div className="absolute top-0 left-1/2 w-3 h-3 bg-blue-500 rounded-full animate-orbit" />
                 <div
                   className="absolute top-0 left-1/2 w-3 h-3 bg-purple-500 rounded-full animate-orbit-reverse"

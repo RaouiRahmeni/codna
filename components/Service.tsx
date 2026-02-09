@@ -120,14 +120,14 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start mx-5">
         {/* Left Side */}
         <div className="relative">
           {/* Animated Icon */}
           <div
             className={`inline-flex items-center justify-center w-16 h-16 ${colors.bg} rounded-2xl mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 ${colors.border} border-2`}
           >
-            <span className="text-3xl transition-transform duration-500 group-hover:scale-125">
+            <span className="text-4xl transition-transform duration-500 group-hover:scale-250">
               {service.icon}
             </span>
           </div>
@@ -141,7 +141,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           </p>
 
           {/* Decorative Line */}
-          <div className="mt-6 h-1 w-20 bg-gradient-to-r from-black to-gray-300 rounded-full transition-all duration-500 group-hover:w-32" />
+          <div className="mt-6 h-1 w-20 bg-linear-to-r from-black to-gray-300 rounded-full transition-all duration-500 group-hover:w-32" />
         </div>
 
         {/* Right Side - Outcomes */}
@@ -154,7 +154,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
                 Business Outcomes
               </span>
               <div
-                className={`w-2 h-2 rounded-full ${colors.text} animate-pulse`}
+                className={`w-10 h-10 rounded-full ${colors.text} animate-pulse`}
               />
             </div>
 
@@ -172,15 +172,17 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
                   <span
                     className={`inline-block w-6 h-6 ${
                       colors.bg
-                    } rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0 transition-transform duration-300 ${
+                    } rounded-lg flex items-center justify-center mt-0.5 shrink-0 transition-transform duration-300 ${
                       isHovered ? "scale-110 rotate-12" : ""
                     }`}
                   >
-                    <span className={`text-sm ${colors.text} font-bold`}>
+                    <span
+                      className={`text-xl flex items-center justify-center ${colors.text} font-bold`}
+                    >
                       ✓
                     </span>
                   </span>
-                  <span className="text-black font-medium leading-relaxed">
+                  <span className="text-black  text-xl font-medium leading-relaxed">
                     {outcome}
                   </span>
                 </li>
@@ -197,7 +199,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
 
       {/* Separator Line */}
       {index < services.length - 1 && (
-        <div className="mt-24 mb-24 relative">
+        <div className="mt-10 mb-10 relative">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-200" />
           </div>
@@ -234,8 +236,10 @@ export default function Services() {
   }, []);
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white via-gray-50 to-white border-t border-gray-100 overflow-hidden">
+    <section className="relative py-20 bg-linear-to-b from-white via-gray-50 to-white border-t border-gray-100 overflow-hidden">
       {/* Background Decorations */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.06)_1px,transparent_1px)] bg-size-[48px_48px] mask-[radial-gradient(ellipse_at_center,black_55%,transparent_85%)]" />
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-72 h-72 bg-blue-400/5 rounded-full blur-3xl animate-pulse-slow" />
         <div
@@ -263,7 +267,7 @@ export default function Services() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight">
             Services Built for{" "}
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent bg-size-[200%_auto] animate-gradient">
                 Business Outcomes
               </span>
               <span className="absolute -bottom-2 left-0 w-full h-3 bg-yellow-300/50 -z-10" />
@@ -298,7 +302,7 @@ export default function Services() {
             <span className="relative z-10">
               Let&apos;s Talk About Your Project
             </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="absolute inset-0 bg-linear-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
         </div>
       </div>
